@@ -1,8 +1,8 @@
 	html {font-size: 10px;cursor: none;}
 	
-    body {background: #ededed;transition: all 1s ease-out;}
+    body {background: #ededed;transition: all 1s ease-out;overflow-x: hidden;}
     body.dark {background: #1a1a1a;}
-		
+	.container {padding: 0 16%;}		
     .cursor {position: absolute;left: 0; top: 0;width: 10px;
         height: 10px;border-radius: 50%;
         z-index: 9999;background-color: #fff;user-select: none;
@@ -31,7 +31,7 @@
     .project .project_list li:first-child {border-top: 1px solid #000;}
     .project .project_list li {overflow: hidden;padding: 70px 5.5%;border-bottom: 1px solid #000;height: 340px;font-family: 'EF_Rebecca';transition: all 0.8s ease-out;}
     .dark .project .project_list li {border-bottom: 1px solid #fff;}
-    .project .project_list li h3 {font-size: 7rem;transform: translate(0,0);transition: all 0.8s ease-out;line-height: 100px;color: #111;}
+    .project .project_list li h3 {display: flex;font-size: 7rem;transform: translate(0,0);transition: all 0.8s ease-out;line-height: 100px;color: #111;}
     .dark .project .project_list li h3 {color: #fff;}
     .project .project_list li.active h3 {transform: translate(8%,0);}
     .project .project_list li h3 span {display: inline-block;margin-right: 20px;font-size: 20px;vertical-align: top;}
@@ -58,7 +58,7 @@
     .project_bg .project_con .content {text-align: center;}
     .project_bg .project_con .content .txt {font-family: 'NanumBarunGothic';font-size: 18px;line-height: 28px;color: #fff;text-align: left;margin-bottom: 50px;}
 	.project_bg .project_con .content .view_site {font-family: 'NanumBarunGothic';display: inline-block;color: #fff;font-size: 2rem;border: 1px solid #fff;height: 60px;line-height: 60px;width: 200px;border-radius: 13px;}
-    .project_bg .project_con .proj_close {position: absolute;top: 3%;right: 3%;width: 45px;}
+    .project_bg .project_con .proj_close {display: none;position: absolute;top: 3%;right: 3%;width: 45px;}
 
     .work {margin: 200px 0;}
     .work .work_list {display: flex;flex-wrap: wrap; justify-content: space-between;}
@@ -74,7 +74,6 @@
 
     .work .work_list li {width: 37.05%;}
     .work .work_list li:nth-child(2) {width: 48%;margin-top: 7%;}
-    .work .work_list li:nth-child(3) {width: 48%;}
     .work .work_list li .work_img {overflow: hidden;border-radius: 15px;}
     .work .work_list li .work_img img {transition: transform 1s;width: 100%;height: 100%;}
     .work .work_list li .work_img img:hover {transform: scale(1.1);}
@@ -101,10 +100,11 @@
     }
 	@media (max-width: 768px){
 		.container {padding: 0 6%;}	
-		.project_bg .project_con .item {padding: 21% 10%;}
+		.project_bg .project_con .item {padding: 25% 10%;}
 		.project_bg .project_con .content .txt {font-size: 16px;}
 		.project_bg .project_con .content .view_site {font-size: 18px;height: 50px;line-height: 50px;border-radius: 6px;}
 		.project_bg .project_con .proj_close {width: 28px;}
+		.project .project_list li h3 {line-height: 42px;}
 	}
 	@media (max-width: 500px){
         html {font-size: 4px;}
@@ -117,7 +117,7 @@
         .work .work_list li {width: 100%;margin-bottom: 40px;}
         .work .work_list li:nth-child(2) {width: 100%;margin-top: 0;}
         .work .work_list li:nth-child(3) {width: 100%;}
-
+		.work .work_list li .txt {font-size: 16px;margin-top: 20px;}
     }
 
 	@media (max-width: 479px){

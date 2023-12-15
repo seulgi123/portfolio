@@ -156,20 +156,16 @@
         <section class="work">
             <div class="container">
                 <ul class="work_list">
-                    <li class="cursor_point" data-aos="zoom-in-up">
-                        <div class="work_img"><img src="img/work_img1.png" alt="국정원 이미지"></div>
+                    <li data-aos="zoom-in-up">
+                        <div class="work_img cursor_point"><img src="img/work_img1.png" alt="국정원 이미지"></div>
                         <p class="txt">국정원 웹접근성</p>
                     </li>
-                    <li class="cursor_point" data-aos="zoom-in-up"> 
-                        <div class="work_img"><img src="img/work_img2.PNG" alt="빌리프 이미지"></div>
+                    <li data-aos="zoom-in-up"> 
+                        <div class="work_img cursor_point"><img src="img/work_img2.PNG" alt="빌리프 이미지"></div>
                         <p class="txt">빌리프 메인 리뉴얼</p>
                     </li>
-                    <li class="cursor_point" data-aos="zoom-in-up">
-                        <div class="work_img"><img src="img/work_img2.PNG" alt="빌리프 이미지"></div>
-                        <p class="txt">빌리프 메인 리뉴얼</p>
-                    </li>
-                    <li class="cursor_point" data-aos="zoom-in-up">
-                        <div class="work_img"><img src="img/work_img1.png" alt="국정원 이미지"></div>
+                    <li data-aos="zoom-in-up">
+                        <div class="work_img cursor_point"><img src="img/work_img1.png" alt="국정원 이미지"></div>
                         <p class="txt">국정원 웹접근성</p>
                     </li>
                 </ul>
@@ -314,6 +310,7 @@
 
     
         let projectItem= $('.project_bg .project_con .item');
+		let projectClose = $('.project_bg .project_con .proj_close');
 		$('.project_list li').click(function(){
 		
 			setTimeout(function () {
@@ -322,19 +319,21 @@
 
 			
 			let listIdx = $(this).index();
-			//projectItem.hide();
+	
 			setTimeout(function () {
 				projectItem.eq(listIdx).fadeIn(600);
+				projectClose.fadeIn(600);
 			}, 1000);
 
 		});
 
-        $('.project_bg .proj_close').click(function(){
+        projectClose.click(function(){
             
             setTimeout(function () {
 				toggle = !toggle;
 			}, 300);
             projectItem.fadeOut();
+			projectClose.fadeOut();
 
             // if(toggle){
             //     ul.classList.remove('active');
