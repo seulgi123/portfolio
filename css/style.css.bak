@@ -27,7 +27,7 @@
     .main .vod_group .vod {width: 100%;}
     
 
-   
+    .project {overflow: hidden;}
     .project .project_list li:first-child {border-top: 1px solid #000;}
     .project .project_list li {overflow: hidden;padding: 70px 5.5%;border-bottom: 1px solid #000;height: 340px;font-family: 'EF_Rebecca';transition: all 0.8s ease-out;}
     .dark .project .project_list li {border-bottom: 1px solid #fff;}
@@ -42,7 +42,7 @@
     .project .img_group .project_img img {transform: scale(1.6);transition: transform 1s ease-out;}
     .project .img_group .project_img.active {height: 515px;}
     .project .img_group .project_img.active img {transform: scale(1);}
-    .project_bg {position: fixed;width: 100%;min-height: 0;z-index: 900;overflow: hidden;}
+    .project_bg {position: fixed;width: 100%;min-height: 0;z-index: 900;}
     .project_bg.active {min-height: 100%;}
     .project_bg .transition {position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
     .project_bg .project_con {display: none;}
