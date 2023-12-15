@@ -2,7 +2,7 @@
 	
     body {background: #ededed;transition: all 1s ease-out;}
     body.dark {background: #1a1a1a;}
-    .container {padding: 0 18%;}
+		
     .cursor {position: absolute;left: 0; top: 0;width: 10px;
         height: 10px;border-radius: 50%;
         z-index: 9999;background-color: #fff;user-select: none;
@@ -27,7 +27,7 @@
     .main .vod_group .vod {width: 100%;}
     
 
-    .project {overflow: hidden;}
+   
     .project .project_list li:first-child {border-top: 1px solid #000;}
     .project .project_list li {overflow: hidden;padding: 70px 5.5%;border-bottom: 1px solid #000;height: 340px;font-family: 'EF_Rebecca';transition: all 0.8s ease-out;}
     .dark .project .project_list li {border-bottom: 1px solid #fff;}
@@ -42,7 +42,7 @@
     .project .img_group .project_img img {transform: scale(1.6);transition: transform 1s ease-out;}
     .project .img_group .project_img.active {height: 515px;}
     .project .img_group .project_img.active img {transform: scale(1);}
-    .project_bg {position: fixed;width: 100%;min-height: 0;z-index: 900;}
+    .project_bg {position: fixed;width: 100%;min-height: 0;z-index: 900;overflow: hidden;}
     .project_bg.active {min-height: 100%;}
     .project_bg .transition {position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
     .project_bg .project_con {display: none;}
@@ -50,17 +50,17 @@
     .project_bg .project_con {position: relative;}
 	.project_bg .project_con .item {display: none;text-align: center;background: url(../img/project_con_img1.jpg);height: 100vh;padding: 13% 16%;background-size: cover;}
     .project_bg .project_con .item:nth-child(2) {background: url(../img/project_con_img2.jpg);background-size: cover;}
-	.project_bg .project_con .item:nth-child(3) {background: url(../img/project_con_img3.jpg);background-size: cover;}
+	.project_bg .project_con .item:nth-child(3) {background: url(../img/project_con_img3.jpg) center;background-size: cover;}
 	.project_bg .project_con .item:nth-child(4) {background: url(../img/project_con_img4.jpg);background-size: cover;}
 	.project_bg .project_con .item:nth-child(5) {background: url(../img/project_con_img5.jpg);background-size: cover;}
 	.project_bg .project_con h4 {font-family: 'EF_Rebecca';font-size: 6rem;font-weight: 500;color: #fff;margin-bottom: 22px;}
     .project_bg .project_con .site_url {font-family: 'NanumBarunGothic';display: inline-block;font-size: 3.6rem;color: #fff;margin-bottom: 60px;}
     .project_bg .project_con .content {text-align: center;}
-    .project_bg .project_con .content .txt {font-family: 'NanumBarunGothic';font-size: 1.8rem;line-height: 28px;color: #fff;text-align: left;margin-bottom: 50px;}
+    .project_bg .project_con .content .txt {font-family: 'NanumBarunGothic';font-size: 18px;line-height: 28px;color: #fff;text-align: left;margin-bottom: 50px;}
 	.project_bg .project_con .content .view_site {font-family: 'NanumBarunGothic';display: inline-block;color: #fff;font-size: 2rem;border: 1px solid #fff;height: 60px;line-height: 60px;width: 200px;border-radius: 13px;}
     .project_bg .project_con .proj_close {position: absolute;top: 3%;right: 3%;width: 45px;}
 
-    .work {height: 200vh;margin-top: 200px;}
+    .work {margin: 200px 0;}
     .work .work_list {display: flex;flex-wrap: wrap; justify-content: space-between;}
     /* .work .work_list li {width: ;transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.84);transform: translate(0,50px);opacity: 0;}
     .work .work_list li:nth-child(2) {transition-delay: 0.2s;margin-top: 8%;}
@@ -100,8 +100,12 @@
         .work {margin-top: 100px;}
     }
 	@media (max-width: 768px){
-		
-	]
+		.container {padding: 0 6%;}	
+		.project_bg .project_con .item {padding: 21% 10%;}
+		.project_bg .project_con .content .txt {font-size: 16px;}
+		.project_bg .project_con .content .view_site {font-size: 18px;height: 50px;line-height: 50px;border-radius: 6px;}
+		.project_bg .project_con .proj_close {width: 28px;}
+	}
 	@media (max-width: 500px){
         html {font-size: 4px;}
 		
@@ -109,15 +113,16 @@
         .project .img_group {width: 330px;height: 194px;}
 		.project .img_group .project_img.active {height: 194px;}
         .project .project_list li h3 span {margin-right: 10px;font-size: 14px;}
+
         .work .work_list li {width: 100%;margin-bottom: 40px;}
         .work .work_list li:nth-child(2) {width: 100%;margin-top: 0;}
         .work .work_list li:nth-child(3) {width: 100%;}
+
     }
 
 	@media (max-width: 479px){
-
 		html {cursor: auto;}
 		.cursor, .cursor-follower {display: none;}
 		.project .img_group {display: none;}
-
-	]
+		.project_bg .project_con .content .txt {font-size: 14px;} 
+	}
