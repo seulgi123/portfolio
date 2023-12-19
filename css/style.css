@@ -73,11 +73,14 @@
     .work .work_list li .work_img img:hover {transform: scale(1.1);} */
 
     .work .work_list li {width: 37.05%;}
+    
     .work .work_list li:nth-child(2) {width: 48%;margin-top: 7%;}
-    .work .work_list li .work_img {overflow: hidden;border-radius: 15px;}
+    .work .work_list li .work_img {overflow: hidden;border-radius: 15px;position: relative;}
+    .work .work_list li .work_img:hover .over {opacity: 1;}
+    .work .work_list li .work_img:hover img {transform: scale(1.1);}
     .work .work_list li .work_img img {transition: transform 1s;width: 100%;height: 100%;}
-    .work .work_list li .work_img img:hover {transform: scale(1.1);}
-	.work .work_list li .txt {font-family: 'EF_Rebecca';font-size: 3.2rem;color: #fff;margin-top: 30px;}
+    .work .work_list li .work_img .over {position: absolute;top: 0;left: 0;background: rgba(0,0,0,0.6);width: 100%;height: 100%;font-family: 'NanumBarunGothic';color: #fff;font-size: 24px;padding: 0 5%;line-height: 35px;text-align: center;word-break: keep-all;opacity: 0;transition: all 0.8s;padding-top: 30%;}
+    .work .work_list li .txt {font-family: 'EF_Rebecca';font-size: 3.2rem;color: #fff;margin-top: 30px;}
 
     
 
@@ -97,6 +100,7 @@
 		.project .project_list li {height: 270px;}
 		.project .project_list li h3 {line-height: 63px;}
         .work {margin-top: 100px;}
+        .work .work_list li .work_img .over {font-size: 18px;line-height: 25px;}
     }
 	@media (max-width: 768px){
 		.container {padding: 0 6%;}	
