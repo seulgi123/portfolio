@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="item">
+                <!-- <div class="item">
                     <h4>현대제철 프로젝트</h4>
                     <a href="https://poinfo-hyundai-steel.com" target="_blank" class="site_url">https://poinfo-hyundai-steel.com</a>
                     <div class="content">
@@ -72,7 +72,7 @@
                         </p>
 						<a href="https://poinfo-hyundai-steel.com" target="_blank" class="view_site cursor_point">사이트 이동</a>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="item">
                     <h4>달서선사관 프로젝트</h4>
@@ -106,10 +106,6 @@
          </div>
 
 
-        <!-- <header class="header">
-            <h1 class="logo">슬기롭게</h1>
-        </header> -->
-
         <section class="main">
             <h2 class="slogan">
                 <p class="slogan_main">LIKE MY NAME ,</p>
@@ -122,11 +118,56 @@
             </div>
         </section>
 
+        <section class="jason_project" style="height: 2000px;">
+            <div class="container">
+                <div class="app_img">
+                    <img class="market" src="img/jason_app01.png" alt="공구마켓 앱 이미지">
+                    <img class="sale" src="img/jason_app03.png" alt="할인중독 앱 이미지">
+                    <img class="simsale" src="img/jason_app02.png" alt="심쿵할인 앱 이미지">
+                </div>
+                <div class="des">
+                    <h3>e-commerce 플랫폼</h3>
+                    <p>
+                        공구마켓, 할인중독, 심쿵할인 <br>
+                        앱 내의 웬뷰 영역 퍼블리싱 담당
+                    </p>
+                </div>
+            </div>
+
+          
+
+        </section>
+
+        <script>
+                $(window).scroll(function(){
+                    var height = $(window).scrollTop();
+                    if ( height > 3000 ) {
+                        $('.jason_project .app_img img').css('transform','translateY('+ -800 +'px)');
+                        $('.jason_project .des').css('transform','translateY('+ -800 +'px)');
+                    } else {
+                        $('.jason_project .app_img img').css('transform','translateY('+ 0 +'px)');
+                        $('.jason_project .des').css('transform','translateY('+ 0 +'px)');
+                    }
+                });
+
+
+                // $(window).scroll(function(){
+                //     var height = $(window).scrollTop();
+                //     if (height > 2000) {
+                //         $('.app_img img').css({'transform':'translateY('+ 0 +'px)','opacity':'1'});
+                //     } else {
+                //         $('.app_img img').css({'transform':'translateY('+ -800 +'px)','opacity':'0'});
+                //     }
+                // });
+                
+            
+            </script>
+
         <section class="project">
             <div class="img_group">
                 <div class="project_img"><img src="img/port_img1.jpg" alt="피죤 이미지"></div>
                 <div class="project_img"><img src="img/port_img2.jpg" alt="현대IMC 이미지"></div>
-                <div class="project_img"><img src="img/port_img2.jpg" alt="현대제철 이미지"></div>
+                <!-- <div class="project_img"><img src="img/port_img2.jpg" alt="현대제철 이미지"></div> -->
                 <div class="project_img"><img src="img/port_img3.jpg" alt="달서선사관 이미지"></div>
                 <div class="project_img"><img src="img/port_img4.jpg" alt="더블플래그 이미지"></div>
             </div>
@@ -139,9 +180,9 @@
                 <li>
                     <h3><span>02</span>HYUNDAI <br>IMC</h3>
                 </li>
-                <li>
+                <!-- <li>
                     <h3><span>03</span>HYUNDAI <br>STEEL</h3>
-                </li>
+                </li> -->
                 <li>
                     <h3><span>04</span>DALSEO</h3>
                 </li>
@@ -194,7 +235,7 @@
 			let height = $(window).height();
 
 			if (width > 768){
-                main.outerHeight(height*3).outerWidth(width);
+                main.outerHeight(height*2.1).outerWidth(width);
                 
 			} else {
                 main.outerHeight(height).outerWidth(width);
@@ -259,6 +300,24 @@
 			follower.removeClass('active');
 
         });
+
+
+
+        // jason project
+        let jasonProject = $('.jason_project');
+
+        $(window).resize(function(){
+			let width = $(window).width();
+			let height = $(window).height();
+
+			if (width > 768){
+                jasonProject.outerHeight(height*2);
+                
+			} else {
+                jasonProject.outerHeight(height);
+			}	
+				
+		}).resize();
     
 
         // project 
