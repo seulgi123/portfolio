@@ -392,15 +392,15 @@ body.dark {
     margin: 0 auto;
   }
   .jason_project .container .app_img img {
-    width: 200px;
-    left: 95px;
+    width: 46%;
+    left: 104px;
   }
   .jason_project .container .app_img img.sale {
-    width: 170px;
-    left: 233px;
+    width: 39%;
+    left: 265px;
   }
   .jason_project .container .app_img img.simsale {
-    width: 150px;
+    width: 35%;
   }
   .jason_project .container .des h3 {
     font-size: 24px;
@@ -459,6 +459,22 @@ body.dark {
   }
   .jason_project .container {
     padding: 12% 20px;
+  }
+  .jason_project .container .app_img {
+    width: 390px;
+  }
+  .jason_project .container .app_img img {
+    left: 89px;
+  }
+  .jason_project .container .app_img img.sale {
+    left: 237px;
+  }
+  .jason_project .container .des h3 {
+    font-size: 20px;
+  }
+  .jason_project .container .des p {
+    font-size: 14px;
+    line-height: 23px;
   }
   .project .img_group {
     width: 330px;
