@@ -461,13 +461,13 @@ body.dark {
     padding: 12% 20px;
   }
   .jason_project .container .app_img {
-    width: 390px;
+    width: 360px;
   }
   .jason_project .container .app_img img {
     left: 89px;
   }
   .jason_project .container .app_img img.sale {
-    left: 237px;
+    left: 225px;
   }
   .jason_project .container .des h3 {
     font-size: 20px;
